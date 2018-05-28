@@ -10,4 +10,11 @@ describe('HelloWorld.vue', () => {
     });
     expect(wrapper.text()).to.include(msg);
   });
+
+  it('renders essential links', () => {
+    const wrapper = shallowMount(HelloWorld);
+
+    // tslint:disable-next-line:no-unused-expression
+    expect(wrapper.find('#hello.essential-links').exists()).to.be.true;
+  });
 });
